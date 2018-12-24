@@ -110,6 +110,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="recofarma_db.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\images.png" />
   </ItemGroup>
   <ItemGroup>

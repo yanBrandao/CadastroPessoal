@@ -39,23 +39,23 @@
             this.tbpAbasPrograma = new System.Windows.Forms.TabControl();
             this.abaPessoa = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnRemoverPessoa = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAdicionarPessoa = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridPessoas = new System.Windows.Forms.DataGridView();
-            this.btnAdicionarPessoa = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnRemoverPessoa = new System.Windows.Forms.Button();
-            this.btnExportar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tbpAbasPrograma.SuspendLayout();
             this.abaPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPessoas)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -94,7 +94,7 @@
             this.pedidoToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.pedidoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
-            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.pedidoToolStripMenuItem.Text = "Pedido";
             // 
             // pessoaToolStripMenuItem
@@ -102,7 +102,7 @@
             this.pessoaToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.pessoaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
@@ -111,7 +111,7 @@
             this.produtoToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.produtoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.produtoToolStripMenuItem.Text = "Produto";
             // 
             // tbpAbasPrograma
@@ -147,6 +147,64 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(786, 100);
             this.panel2.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnExportar);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(668, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(118, 100);
+            this.panel5.TabIndex = 3;
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExportar.Location = new System.Drawing.Point(0, 0);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(118, 100);
+            this.btnExportar.TabIndex = 1;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnRemoverPessoa);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(107, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(120, 100);
+            this.panel4.TabIndex = 2;
+            // 
+            // btnRemoverPessoa
+            // 
+            this.btnRemoverPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRemoverPessoa.Location = new System.Drawing.Point(0, 0);
+            this.btnRemoverPessoa.Name = "btnRemoverPessoa";
+            this.btnRemoverPessoa.Size = new System.Drawing.Size(120, 100);
+            this.btnRemoverPessoa.TabIndex = 1;
+            this.btnRemoverPessoa.Text = "Remover";
+            this.btnRemoverPessoa.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAdicionarPessoa);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(107, 100);
+            this.panel3.TabIndex = 1;
+            // 
+            // btnAdicionarPessoa
+            // 
+            this.btnAdicionarPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdicionarPessoa.Location = new System.Drawing.Point(0, 0);
+            this.btnAdicionarPessoa.Name = "btnAdicionarPessoa";
+            this.btnAdicionarPessoa.Size = new System.Drawing.Size(107, 100);
+            this.btnAdicionarPessoa.TabIndex = 0;
+            this.btnAdicionarPessoa.Text = "inserir";
+            this.btnAdicionarPessoa.UseVisualStyleBackColor = true;
+            this.btnAdicionarPessoa.Click += new System.EventHandler(this.btnAdicionarPessoa_Click);
             // 
             // panel1
             // 
@@ -185,64 +243,6 @@
             this.gridPessoas.Size = new System.Drawing.Size(786, 394);
             this.gridPessoas.TabIndex = 0;
             // 
-            // btnAdicionarPessoa
-            // 
-            this.btnAdicionarPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdicionarPessoa.Location = new System.Drawing.Point(0, 0);
-            this.btnAdicionarPessoa.Name = "btnAdicionarPessoa";
-            this.btnAdicionarPessoa.Size = new System.Drawing.Size(107, 100);
-            this.btnAdicionarPessoa.TabIndex = 0;
-            this.btnAdicionarPessoa.Text = "inserir";
-            this.btnAdicionarPessoa.UseVisualStyleBackColor = true;
-            this.btnAdicionarPessoa.Click += new System.EventHandler(this.btnAdicionarPessoa_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAdicionarPessoa);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(107, 100);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnRemoverPessoa);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(107, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(120, 100);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnExportar);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(668, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(118, 100);
-            this.panel5.TabIndex = 3;
-            // 
-            // btnRemoverPessoa
-            // 
-            this.btnRemoverPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRemoverPessoa.Location = new System.Drawing.Point(0, 0);
-            this.btnRemoverPessoa.Name = "btnRemoverPessoa";
-            this.btnRemoverPessoa.Size = new System.Drawing.Size(120, 100);
-            this.btnRemoverPessoa.TabIndex = 1;
-            this.btnRemoverPessoa.Text = "Remover";
-            this.btnRemoverPessoa.UseVisualStyleBackColor = true;
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExportar.Location = new System.Drawing.Point(0, 0);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(118, 100);
-            this.btnExportar.TabIndex = 1;
-            this.btnExportar.Text = "Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            // 
             // TelaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,11 +263,11 @@
             this.tbpAbasPrograma.ResumeLayout(false);
             this.abaPessoa.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridPessoas)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

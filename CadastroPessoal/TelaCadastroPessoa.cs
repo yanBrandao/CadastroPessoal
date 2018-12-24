@@ -23,7 +23,7 @@ namespace CadastroPessoal
             SQLiteConnection conn = null;
             string sql = "INSERT INTO `PESSOA`(`PES_NOME`,`PES_DATA_CADASTRO`,`PES_NASCIMENTO`) " +
                 "VALUES(\"" + tbNome.Text + "\", \"" + DateTime.Now.ToString() + "\", \"" + dtpNascimento.Text + "\");";
-            string strConn = @"Data Source=D:\Desktop\recofarma_db.db";
+            string strConn = @"Data Source=recofarma_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);

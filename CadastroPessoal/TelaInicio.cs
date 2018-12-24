@@ -51,7 +51,7 @@ namespace CadastroPessoal
             DataTable dt = new DataTable();
             SQLiteConnection conn = null;
             string sql = "select * from PESSOA";
-            string strConn = @"Data Source=D:\Desktop\recofarma_db.db";
+            string strConn = @"Data Source=recofarma_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);
