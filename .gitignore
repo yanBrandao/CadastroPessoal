@@ -10,29 +10,6 @@ TestResults
 *.sln.docstates
 /.vs
 
-# Build results
-[Dd]ebug/
-[Rr]elease/
-x64/
-*_i.c
-*_p.c
-*.ilk
-*.meta
-*.obj
-*.pch
-*.pdb
-*.pgc
-*.pgd
-*.rsp
-*.sbr
-*.tlb
-*.tli
-*.tlh
-*.tmp
-*.log
-*.vspscc
-*.vssscc
-.builds
 
 # Visual C++ cache files
 ipch/
@@ -85,9 +62,6 @@ csx
 # Windows Store app package directory
 AppPackages/
 
-# Others
-[Bb]in
-[Oo]bj
 sql
 TestResults
 [Tt]est[Rr]esult*
