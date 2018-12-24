@@ -50,7 +50,9 @@ namespace CadastroPessoal
         {
             DataTable dt = new DataTable();
             SQLiteConnection conn = null;
-            string sql = "select * from PESSOA";
+            string sql = "SELECT PES_NOME AS NOME, PES_NASCIMENTO AS DATA_NASCIMENTO, CERT.CERT_NOME AS GRAU_INSTRUÇÃO " +
+                "FROM PESSOA PES" +
+                " JOIN CERTIFICACOES CERT ON PES.PES_CERT_COD = CERT.CERT_ID";
             string strConn = @"Data Source=recofarma_db.db";
             try
             {
@@ -58,6 +60,7 @@ namespace CadastroPessoal
                 SQLiteDataAdapter da = new SQLiteDataAdapter(sql, strConn);
                 da.Fill(dt);
                 gridPessoas.DataSource = dt.DefaultView;
+                
             }
             catch (Exception ex)
             {
@@ -75,6 +78,69 @@ namespace CadastroPessoal
         private void btnAdicionarPessoa_Click(object sender, EventArgs e)
         {
             new TelaCadastroPessoa().Show();
+        }
+
+        private void TelaInicio_Activated(object sender, EventArgs e)
+        {
+            if (tbpAbasPrograma.Visible)
+                CarregaDados();
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.OK == MessageBox.Show("Você tem certeza que deseja remover esta pessoa?", "Cuidado!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation))
+            {
+                string sql = "DELETE FROM PESSOA WHERE PES_NOME = \"" + gridPessoas.SelectedRows[0].Cells[0].Value + "\"";
+                SQLiteConnection conn = null;
+                string strConn = @"Data Source=recofarma_db.db";
+                try
+                {
+                    conn = new SQLiteConnection(strConn);
+                    conn.Open();
+                    SQLiteCommand command = new SQLiteCommand(sql, conn);
+                    command.ExecuteNonQuery();
+                    CarregaDados();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro :" + ex.Message);
+                }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
+        private void gridPessoas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                cmsMenuCelula.Show(Cursor.Position);
+            }
+        }
+
+        private void gridPessoas_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hti = gridPessoas.HitTest(e.X, e.Y);
+                gridPessoas.ClearSelection();
+                gridPessoas.Rows[hti.RowIndex].Selected = true;
+            }
+        }
+
+        private void grauDeInstruçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TelaCadastroInstrução().Show();
         }
     }
 }

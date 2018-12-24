@@ -41,3 +41,4 @@ C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\Cadast
 C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.csproj.CopyComplete
 C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.exe
 C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.pdb
+C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.TelaCadastroInstrução.resources

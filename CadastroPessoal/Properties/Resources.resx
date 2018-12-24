@@ -133,4 +133,7 @@
   <data name="27825" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\27825.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="desenho-chapeu-de-formatura-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desenho-chapeu-de-formatura-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
