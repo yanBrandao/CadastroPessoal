@@ -53,7 +53,7 @@ namespace CadastroPessoal
             string sql = "SELECT PES_NOME AS NOME, PES_NASCIMENTO AS DATA_NASCIMENTO, CERT.CERT_NOME AS GRAU_INSTRUÇÃO " +
                 "FROM PESSOA PES" +
                 " JOIN CERTIFICACOES CERT ON PES.PES_CERT_COD = CERT.CERT_ID";
-            string strConn = @"Data Source=recofarma_db.db";
+            string strConn = @"Data Source=pessoal_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);
@@ -97,7 +97,7 @@ namespace CadastroPessoal
             {
                 string sql = "DELETE FROM PESSOA WHERE PES_NOME = \"" + gridPessoas.SelectedRows[0].Cells[0].Value + "\"";
                 SQLiteConnection conn = null;
-                string strConn = @"Data Source=recofarma_db.db";
+                string strConn = @"Data Source=pessoal_db.db";
                 try
                 {
                     conn = new SQLiteConnection(strConn);

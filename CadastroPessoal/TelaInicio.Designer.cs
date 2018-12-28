@@ -253,7 +253,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CadastroPessoal.Properties.Resources._668759;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbpAbasPrograma);
@@ -261,7 +260,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TelaInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Cadastros - Recofarma";
+            this.Text = "Sistema de Cadastros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.TelaInicio_Activated);
             this.Load += new System.EventHandler(this.TelaInicio_Load);

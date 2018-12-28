@@ -42,3 +42,27 @@ C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\Cadast
 C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.exe
 C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.pdb
 C:\Users\Yan B. Diniz\Documents\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.TelaCadastroInstrução.resources
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\recofarma_db.db
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\CadastroPessoal.exe.config
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\CadastroPessoal.exe
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\CadastroPessoal.pdb
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\EntityFramework.dll
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\System.Data.SQLite.dll
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\EntityFramework.xml
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\System.Data.SQLite.xml
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.csprojAssemblyReference.cache
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.Properties.Resources.resources
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.TelaCadastroInstrução.resources
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.TelaCadastroPessoa.resources
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.TelaInicio.resources
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.TelaLogin.resources
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.csproj.GenerateResource.cache
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.csproj.CoreCompileInputs.cache
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.csproj.CopyComplete
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.exe
+C:\Users\yan.diniz\Developer\Projetos Pessoais\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.pdb

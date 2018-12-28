@@ -23,7 +23,7 @@ namespace CadastroPessoal
             SQLiteConnection conn = null;
             string sql = "INSERT INTO `CERTIFICACOES`(`CERT_NOME`) " +
                 "VALUES(\"" + tbNome.Text + "\");";
-            string strConn = @"Data Source=recofarma_db.db";
+            string strConn = @"Data Source=pessoal_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);

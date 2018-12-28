@@ -63,7 +63,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::CadastroPessoal.Properties.Resources.desenho_chapeu_de_formatura_png;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(130, 12);
             this.pictureBox1.Name = "pictureBox1";

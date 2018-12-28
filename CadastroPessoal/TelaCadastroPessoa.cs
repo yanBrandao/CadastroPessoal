@@ -24,7 +24,7 @@ namespace CadastroPessoal
             string sql = "INSERT INTO `PESSOA`(`PES_NOME`,`PES_DATA_CADASTRO`,`PES_NASCIMENTO`, `PES_CERT_COD`) " +
                 "VALUES(\"" + tbNome.Text + "\", \"" + DateTime.Now.ToString() + "\", \"" + dtpNascimento.Text + "\", " +
                 "(SELECT CERT_ID FROM CERTIFICACOES WHERE CERT_NOME =\"" + cbCertificacoes.SelectedItem + "\"));";
-            string strConn = @"Data Source=recofarma_db.db";
+            string strConn = @"Data Source=pessoal_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);
@@ -53,7 +53,7 @@ namespace CadastroPessoal
         {
             SQLiteConnection conn = null;
             string sql = "SELECT CERT_NOME FROM CERTIFICACOES";
-            string strConn = @"Data Source=recofarma_db.db";
+            string strConn = @"Data Source=pessoal_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);
