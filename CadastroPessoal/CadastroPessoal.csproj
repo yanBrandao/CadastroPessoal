@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.3.1.0\lib\net452\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptHash.Core, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CryptHash.Core.1.0.3\lib\netstandard2.0\CryptHash.Core.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -64,33 +70,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\Pessoa.cs" />
-    <Compile Include="TelaCadastroInstrução.cs">
+    <Compile Include="DTO\PessoaDTO.cs" />
+    <Compile Include="Model\Pessoa.cs" />
+    <Compile Include="Presentation\TelaCadastroInstrução.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadastroInstrução.Designer.cs">
+    <Compile Include="Presentation\TelaCadastroInstrução.Designer.cs">
       <DependentUpon>TelaCadastroInstrução.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaCadastroPessoa.cs">
+    <Compile Include="Presentation\TelaCadastroPessoa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadastroPessoa.Designer.cs">
+    <Compile Include="Presentation\TelaCadastroPessoa.Designer.cs">
       <DependentUpon>TelaCadastroPessoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaInicio.cs">
+    <Compile Include="Presentation\TelaCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicio.Designer.cs">
+    <Compile Include="Presentation\TelaCadastroUsuario.Designer.cs">
+      <DependentUpon>TelaCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\TelaImportarExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\TelaImportarExcel.Designer.cs">
+      <DependentUpon>TelaImportarExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\TelaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\TelaInicio.Designer.cs">
       <DependentUpon>TelaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaLogin.cs">
+    <Compile Include="Presentation\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaLogin.Designer.cs">
+    <Compile Include="Presentation\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\CustomMD5.cs" />
+    <Compile Include="Utils\Database.cs" />
+    <Compile Include="Utils\TelaAtiva.cs" />
+    <EmbeddedResource Include="Presentation\TelaCadastroUsuario.resx">
+      <DependentUpon>TelaCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\TelaImportarExcel.resx">
+      <DependentUpon>TelaImportarExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -101,16 +129,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaCadastroInstrução.resx">
+    <EmbeddedResource Include="Presentation\TelaCadastroInstrução.resx">
       <DependentUpon>TelaCadastroInstrução.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCadastroPessoa.resx">
+    <EmbeddedResource Include="Presentation\TelaCadastroPessoa.resx">
       <DependentUpon>TelaCadastroPessoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicio.resx">
+    <EmbeddedResource Include="Presentation\TelaInicio.resx">
       <DependentUpon>TelaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaLogin.resx">
+    <EmbeddedResource Include="Presentation\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -128,7 +156,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="recofarma_db.db">
+    <None Include="pessoal_db.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Resources\images.png" />
@@ -148,6 +176,7 @@
   <ItemGroup>
     <None Include="Resources\desenho-chapeu-de-formatura-png.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
