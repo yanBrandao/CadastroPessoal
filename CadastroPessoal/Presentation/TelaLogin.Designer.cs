@@ -46,7 +46,7 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(217, 196);
+            this.btnEntrar.Location = new System.Drawing.Point(217, 216);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(90, 36);
             this.btnEntrar.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.linkCadastro.AutoSize = true;
             this.linkCadastro.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkCadastro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.linkCadastro.Location = new System.Drawing.Point(33, 202);
+            this.linkCadastro.Location = new System.Drawing.Point(33, 222);
             this.linkCadastro.Name = "linkCadastro";
             this.linkCadastro.Size = new System.Drawing.Size(112, 25);
             this.linkCadastro.TabIndex = 2;
@@ -73,7 +73,7 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.Color.White;
-            this.lbUsuario.Location = new System.Drawing.Point(28, 100);
+            this.lbUsuario.Location = new System.Drawing.Point(28, 120);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(86, 25);
             this.lbUsuario.TabIndex = 3;
@@ -82,7 +82,7 @@
             // tbLogin
             // 
             this.tbLogin.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLogin.Location = new System.Drawing.Point(116, 99);
+            this.tbLogin.Location = new System.Drawing.Point(116, 119);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(191, 32);
             this.tbLogin.TabIndex = 4;
@@ -90,7 +90,7 @@
             // tbSenha
             // 
             this.tbSenha.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSenha.Location = new System.Drawing.Point(116, 141);
+            this.tbSenha.Location = new System.Drawing.Point(116, 161);
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(191, 32);
             this.tbSenha.TabIndex = 6;
@@ -101,7 +101,7 @@
             this.lbSenha.AutoSize = true;
             this.lbSenha.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSenha.ForeColor = System.Drawing.Color.White;
-            this.lbSenha.Location = new System.Drawing.Point(33, 142);
+            this.lbSenha.Location = new System.Drawing.Point(33, 162);
             this.lbSenha.Name = "lbSenha";
             this.lbSenha.Size = new System.Drawing.Size(73, 25);
             this.lbSenha.TabIndex = 5;
@@ -119,10 +119,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::CadastroPessoal.Properties.Resources.coke_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 10);
+            this.pictureBox1.BackgroundImage = global::CadastroPessoal.Properties.Resources.workStaff;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(352, 250);
+            this.ClientSize = new System.Drawing.Size(352, 264);
             this.Controls.Add(this.pbSair);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbSenha);
@@ -159,7 +159,7 @@
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.Label lbSenha;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbSair;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

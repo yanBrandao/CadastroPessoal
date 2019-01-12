@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +60,9 @@
             this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbEdit = new System.Windows.Forms.PictureBox();
             this.lbEncontrarPessoas = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pbEdit = new System.Windows.Forms.PictureBox();
             this.pbIcon = new System.Windows.Forms.PictureBox();
             this.pbSair = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -80,8 +80,8 @@
             this.cmsMenuCelula.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).BeginInit();
             this.SuspendLayout();
@@ -156,7 +156,7 @@
             this.tbpAbasPrograma.Location = new System.Drawing.Point(0, 33);
             this.tbpAbasPrograma.Name = "tbpAbasPrograma";
             this.tbpAbasPrograma.SelectedIndex = 0;
-            this.tbpAbasPrograma.Size = new System.Drawing.Size(506, 268);
+            this.tbpAbasPrograma.Size = new System.Drawing.Size(506, 238);
             this.tbpAbasPrograma.TabIndex = 1;
             this.tbpAbasPrograma.Visible = false;
             // 
@@ -166,7 +166,7 @@
             this.abaPessoa.Location = new System.Drawing.Point(4, 34);
             this.abaPessoa.Name = "abaPessoa";
             this.abaPessoa.Padding = new System.Windows.Forms.Padding(3);
-            this.abaPessoa.Size = new System.Drawing.Size(498, 230);
+            this.abaPessoa.Size = new System.Drawing.Size(498, 200);
             this.abaPessoa.TabIndex = 0;
             this.abaPessoa.Text = "Pessoa";
             this.abaPessoa.UseVisualStyleBackColor = true;
@@ -177,7 +177,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 224);
+            this.panel4.Size = new System.Drawing.Size(492, 194);
             this.panel4.TabIndex = 1;
             // 
             // panel1
@@ -187,35 +187,35 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 224);
+            this.panel1.Size = new System.Drawing.Size(492, 194);
             this.panel1.TabIndex = 1;
             // 
             // gridPessoas
             // 
             this.gridPessoas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPessoas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPessoas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPessoas.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPessoas.Location = new System.Drawing.Point(0, 0);
             this.gridPessoas.Name = "gridPessoas";
             this.gridPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridPessoas.Size = new System.Drawing.Size(492, 153);
+            this.gridPessoas.Size = new System.Drawing.Size(492, 123);
             this.gridPessoas.TabIndex = 0;
             this.gridPessoas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridPessoas_CellMouseClick);
             this.gridPessoas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gridPessoas_MouseDown);
@@ -226,7 +226,7 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 153);
+            this.panel2.Location = new System.Drawing.Point(0, 123);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(492, 71);
             this.panel2.TabIndex = 2;
@@ -379,9 +379,9 @@
             this.panel6.Controls.Add(this.tbpAbasPrograma);
             this.panel6.Controls.Add(this.menuStrip1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 80);
+            this.panel6.Location = new System.Drawing.Point(0, 110);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(506, 301);
+            this.panel6.Size = new System.Drawing.Size(506, 271);
             this.panel6.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -399,20 +399,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 268);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 238);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // pbEdit
-            // 
-            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
-            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEdit.Location = new System.Drawing.Point(76, 10);
-            this.pbEdit.Name = "pbEdit";
-            this.pbEdit.Size = new System.Drawing.Size(100, 100);
-            this.pbEdit.TabIndex = 0;
-            this.pbEdit.TabStop = false;
-            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
             // 
             // lbEncontrarPessoas
             // 
@@ -420,7 +408,7 @@
             this.lbEncontrarPessoas.AutoSize = true;
             this.lbEncontrarPessoas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbEncontrarPessoas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEncontrarPessoas.Location = new System.Drawing.Point(46, 113);
+            this.lbEncontrarPessoas.Location = new System.Drawing.Point(46, 98);
             this.lbEncontrarPessoas.Name = "lbEncontrarPessoas";
             this.lbEncontrarPessoas.Size = new System.Drawing.Size(160, 20);
             this.lbEncontrarPessoas.TabIndex = 1;
@@ -435,15 +423,27 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(506, 80);
+            this.panel7.Size = new System.Drawing.Size(506, 110);
             this.panel7.TabIndex = 3;
+            // 
+            // pbEdit
+            // 
+            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
+            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEdit.Location = new System.Drawing.Point(76, 3);
+            this.pbEdit.Name = "pbEdit";
+            this.pbEdit.Size = new System.Drawing.Size(100, 92);
+            this.pbEdit.TabIndex = 0;
+            this.pbEdit.TabStop = false;
+            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
             // 
             // pbIcon
             // 
-            this.pbIcon.BackgroundImage = global::CadastroPessoal.Properties.Resources.coke_icon;
-            this.pbIcon.Location = new System.Drawing.Point(192, 0);
+            this.pbIcon.BackgroundImage = global::CadastroPessoal.Properties.Resources.workStaff;
+            this.pbIcon.Location = new System.Drawing.Point(153, 5);
             this.pbIcon.Name = "pbIcon";
-            this.pbIcon.Size = new System.Drawing.Size(80, 80);
+            this.pbIcon.Size = new System.Drawing.Size(200, 100);
             this.pbIcon.TabIndex = 1;
             this.pbIcon.TabStop = false;
             // 
@@ -493,8 +493,8 @@
             this.panel6.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).EndInit();
             this.ResumeLayout(false);

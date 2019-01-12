@@ -179,7 +179,7 @@ namespace CadastroPessoal
 
         private void TelaInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //TelaAtiva.formAnterior.Show();
+            TelaAtiva.formAnterior.Show();
         }
 
         private void pbSair_Click(object sender, EventArgs e)
