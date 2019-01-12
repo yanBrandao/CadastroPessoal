@@ -11,16 +11,17 @@ namespace CadastroPessoal.Utils
     public class Database : IDisposable
     {
         SQLiteConnection conn = null;
+        string strConn = @"Data Source=ROS_DB.db";
 
         public void Dispose()
         {
             conn.Close();
         }
 
-        public void executarComandoSQL(string sql)
+        public void executeCommandSQL(string sql)
         {
             
-            string strConn = @"Data Source=pessoal_db.db";
+            
             try
             {
                 conn = new SQLiteConnection(strConn);
@@ -41,13 +42,41 @@ namespace CadastroPessoal.Utils
             }
         }
 
+        public long executeScalarSQL(string sql)
+        {
+            long scalar = -1;
+            string strConn = @"Data Source=ROS_DB.db";
+            try
+            {
+                conn = new SQLiteConnection(strConn);
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand(sql, conn);
+                command.ExecuteNonQuery();
+                string lastRowSQL = @"select last_insert_rowid()";
+                command = new SQLiteCommand(lastRowSQL, conn);
+                scalar = (long) command.ExecuteScalar();
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return scalar;
+        }
 
-        public SQLiteDataReader executarReader(string sql)
+
+        public SQLiteDataReader executeReader(string sql)
         {
             
             SQLiteDataReader reader;
 
-            string strConn = @"Data Source=pessoal_db.db";
             try
             {
                 conn = new SQLiteConnection(strConn);

@@ -7,8 +7,8 @@ using System.Windows.Forms;
 
 namespace CadastroPessoal.Utils
 {
-    public static class TelaAtiva
+    public static class ActiveForm
     {
-        public static Form formAnterior;
+        public static Form lastForm;
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuNavBar = new System.Windows.Forms.MenuStrip();
             this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,11 +61,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbEncontrarPessoas = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnTitleBar = new System.Windows.Forms.Panel();
             this.pbEdit = new System.Windows.Forms.PictureBox();
             this.pbIcon = new System.Windows.Forms.PictureBox();
             this.pbSair = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.menuNavBar.SuspendLayout();
             this.tbpAbasPrograma.SuspendLayout();
             this.abaPessoa.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,24 +80,24 @@
             this.cmsMenuCelula.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuNavBar
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.menuNavBar.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuNavBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inícioToolStripMenuItem,
             this.cadastroToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(506, 33);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuNavBar.Location = new System.Drawing.Point(0, 0);
+            this.menuNavBar.Name = "menuNavBar";
+            this.menuNavBar.Size = new System.Drawing.Size(506, 33);
+            this.menuNavBar.TabIndex = 0;
+            this.menuNavBar.Text = "menuStrip1";
             // 
             // inícioToolStripMenuItem
             // 
@@ -289,7 +289,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(498, 230);
+            this.tabPage1.Size = new System.Drawing.Size(498, 200);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "Buscar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -300,7 +300,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 140);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(492, 87);
+            this.dataGridView1.Size = new System.Drawing.Size(492, 57);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel8
@@ -377,7 +377,7 @@
             // 
             this.panel6.Controls.Add(this.tableLayoutPanel1);
             this.panel6.Controls.Add(this.tbpAbasPrograma);
-            this.panel6.Controls.Add(this.menuStrip1);
+            this.panel6.Controls.Add(this.menuNavBar);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 110);
             this.panel6.Name = "panel6";
@@ -415,16 +415,16 @@
             this.lbEncontrarPessoas.Text = "Encontrar funcionário";
             this.lbEncontrarPessoas.Click += new System.EventHandler(this.lbEncontrarPessoas_Click);
             // 
-            // panel7
+            // pnTitleBar
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.panel7.Controls.Add(this.pbIcon);
-            this.panel7.Controls.Add(this.pbSair);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(506, 110);
-            this.panel7.TabIndex = 3;
+            this.pnTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.pnTitleBar.Controls.Add(this.pbIcon);
+            this.pnTitleBar.Controls.Add(this.pbSair);
+            this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.pnTitleBar.Name = "pnTitleBar";
+            this.pnTitleBar.Size = new System.Drawing.Size(506, 110);
+            this.pnTitleBar.TabIndex = 3;
             // 
             // pbEdit
             // 
@@ -440,7 +440,7 @@
             // 
             // pbIcon
             // 
-            this.pbIcon.BackgroundImage = global::CadastroPessoal.Properties.Resources.workStaff;
+            this.pbIcon.BackgroundImage = global::CadastroPessoal.Properties.Resources.app_icon1;
             this.pbIcon.Location = new System.Drawing.Point(153, 5);
             this.pbIcon.Name = "pbIcon";
             this.pbIcon.Size = new System.Drawing.Size(200, 100);
@@ -464,9 +464,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(506, 381);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pnTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuNavBar;
             this.Name = "TelaInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Cadastros";
@@ -474,8 +474,8 @@
             this.Activated += new System.EventHandler(this.TelaInicio_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TelaInicio_FormClosing);
             this.Load += new System.EventHandler(this.TelaInicio_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuNavBar.ResumeLayout(false);
+            this.menuNavBar.PerformLayout();
             this.tbpAbasPrograma.ResumeLayout(false);
             this.abaPessoa.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -493,7 +493,7 @@
             this.panel6.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel7.ResumeLayout(false);
+            this.pnTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).EndInit();
@@ -503,7 +503,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuNavBar;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoaToolStripMenuItem;
         private System.Windows.Forms.TabControl tbpAbasPrograma;
@@ -523,7 +523,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem empresaToolStripMenuItem;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnTitleBar;
         private System.Windows.Forms.PictureBox pbIcon;
         private System.Windows.Forms.PictureBox pbSair;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

@@ -9,20 +9,20 @@ namespace CadastroPessoal.Utils
 {
     public static class CustomMD5
     {
-        public static string RetornarMD5(string Senha)
+        public static string ReturnMD5(string Senha)
         {
             using (MD5 md5Hash = MD5.Create())
             {
-                return RetonarHash(md5Hash, Senha);
+                return ReturnHash(md5Hash, Senha);
             }
         }
 
-        public static bool ComparaMD5(string senhabanco, string Senha_MD5)
+        public static bool CompareMD5(string senhabanco, string Senha_MD5)
         {
             using (MD5 md5Hash = MD5.Create())
             {
-                var senha = RetornarMD5(senhabanco);
-                if (VerificarHash(md5Hash, Senha_MD5, senha))
+                var senha = ReturnMD5(senhabanco);
+                if (VerifyHash(md5Hash, Senha_MD5, senha))
                 {
                     return true;
                 }
@@ -33,7 +33,7 @@ namespace CadastroPessoal.Utils
             }
         }
 
-        public static string RetonarHash(MD5 md5Hash, string input)
+        public static string ReturnHash(MD5 md5Hash, string input)
         {
             byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
 
@@ -47,7 +47,7 @@ namespace CadastroPessoal.Utils
             return sBuilder.ToString();
         }
 
-        public static bool VerificarHash(MD5 md5Hash, string input, string hash)
+        public static bool VerifyHash(MD5 md5Hash, string input, string hash)
         {
             StringComparer compara = StringComparer.OrdinalIgnoreCase;
 

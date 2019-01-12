@@ -119,7 +119,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::CadastroPessoal.Properties.Resources.workStaff;
+            this.pictureBox1.BackgroundImage = global::CadastroPessoal.Properties.Resources.app_icon1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Location = new System.Drawing.Point(76, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);

@@ -13,6 +13,7 @@ using CadastroPessoal.Utils;
 using CadastroPessoal.Presentation;
 using System.Data.SQLite;
 using CadastroPessoal.Shared;
+using CadastroPessoal.DTO;
 
 namespace CadastroPessoal
 {
@@ -23,6 +24,7 @@ namespace CadastroPessoal
             InitializeComponent();
             btnEntrar.MouseEnter += DesignTemplate.onButtonSaveMouseEnter;
             btnEntrar.MouseLeave += DesignTemplate.onButtonMouseLeave;
+            BackColor = DesignTemplate.primaryColor;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace CadastroPessoal
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string senhaCodificada = CustomMD5.RetornarMD5(tbSenha.Text);
+            string senhaCodificada = CustomMD5.ReturnMD5(tbSenha.Text);
             try
             {
                 bool senhaOK = false;
@@ -43,22 +45,11 @@ namespace CadastroPessoal
                     throw new ArgumentException("Senha não pode ser em branco.");
                 else
                 {
-                    string sql = "SELECT US_SENHA, PER_NOME FROM USUARIO US JOIN PERFIL PER ON US.US_PER_ID = PER.PER_ID " +
-                        " WHERE US_LOGIN = \"" + tbLogin.Text + "\"";
-                    using (Database db = new Database())
-                    {
-                        SQLiteDataReader reader = db.executarReader(sql);
-
-                        while (reader.Read())
-                        {
-                            senhaOK = CustomMD5.ComparaMD5(tbSenha.Text, reader.GetString(0));
-                            perfil = reader.GetString(1);
-                        }
-                    }
+                    senhaOK = UserDTO.loginUser(tbLogin.Text, tbSenha.Text, out perfil);
                     if (senhaOK)
                     {
                         Hide();
-                        TelaAtiva.formAnterior = this;
+                        Utils.ActiveForm.lastForm = this;
                         tbLogin.Clear();
                         tbSenha.Clear();
                         new TelaInicio(perfil).Show();
@@ -83,7 +74,7 @@ namespace CadastroPessoal
         private void linkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Hide();
-            TelaAtiva.formAnterior = this;
+            Utils.ActiveForm.lastForm = this;
             new TelaCadastroUsuario().Show();
         }
 

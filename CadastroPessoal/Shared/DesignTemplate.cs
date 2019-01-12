@@ -12,7 +12,7 @@ namespace CadastroPessoal.Shared
 {
     public static class DesignTemplate
     {
-        public static Color primaryColor = Color.FromArgb(178, 71, 71);
+        public static Color primaryColor = Color.FromArgb(196,191,191);
         public static Color secondaryColor = Color.FromArgb(204, 144, 144);
         public static Color spotlightColor = Color.FromArgb(255, 253, 59);
         public static Color unfocusedtColor = Color.FromArgb(178,178,114);

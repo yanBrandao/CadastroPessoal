@@ -1,4 +1,6 @@
-﻿using CadastroPessoal.Utils;
+﻿using CadastroPessoal.DTO;
+using CadastroPessoal.Shared;
+using CadastroPessoal.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,7 @@ namespace CadastroPessoal.Presentation
         public TelaCadastroUsuario()
         {
             InitializeComponent();
+            BackColor = DesignTemplate.primaryColor;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -36,7 +39,7 @@ namespace CadastroPessoal.Presentation
                     if(DialogResult.OK == MessageBox.Show("Usuário cadastrado com sucesso ao perfil \"Padrão\", contate um administrador pra mais informações", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information))
                     {
                         Close();
-                        TelaAtiva.formAnterior.Show();
+                        Utils.ActiveForm.lastForm.Show();
                     }
                 }
             }catch(ArgumentException ae)
@@ -47,16 +50,12 @@ namespace CadastroPessoal.Presentation
 
         private void salvarUsuario(string usuario, string senha, string cpf)
         {
-            string sql = "INSERT INTO USUARIO(US_LOGIN, US_SENHA, US_CPF, US_PER_ID) VALUES(\"" + usuario +"\" , \"" + CustomMD5.RetornarMD5(senha) + "\", \"" + cpf + "\" , 1)";
-            using (Database db = new Database())
-            {
-                db.executarComandoSQL(sql);
-            }
+            UserDTO.registerUser(usuario, CustomMD5.ReturnMD5(senha), cpf);
         }
 
         private void TelaCadastroUsuario_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TelaAtiva.formAnterior.Show();
+            Utils.ActiveForm.lastForm.Show();
         }
 
         private void btnSalvar_MouseLeave(object sender, EventArgs e)

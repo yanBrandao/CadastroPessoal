@@ -27,7 +27,7 @@ namespace CadastroPessoal
             {
                 using (Database db = new Database())
                 {
-                    db.executarComandoSQL(sql);
+                    db.executeCommandSQL (sql);
                 }
 
                 if (DialogResult.OK == MessageBox.Show("Grau de instrução cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information))

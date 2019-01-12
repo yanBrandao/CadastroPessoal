@@ -28,30 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbNome = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.lbNascimento = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cbCertificacoes = new System.Windows.Forms.ComboBox();
             this.lbGrau = new System.Windows.Forms.Label();
+            this.tbCPF = new System.Windows.Forms.TextBox();
+            this.tbRG = new System.Windows.Forms.TextBox();
+            this.lvCertificatesAdded = new System.Windows.Forms.ListView();
+            this.cbCertificates = new System.Windows.Forms.ComboBox();
+            this.lbSeg = new System.Windows.Forms.Label();
+            this.pbAdd = new System.Windows.Forms.PictureBox();
+            this.pbSair = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtExpirationDate = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbNome
+            // tbName
             // 
-            this.tbNome.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNome.Location = new System.Drawing.Point(186, 95);
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(200, 32);
-            this.tbNome.TabIndex = 0;
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Location = new System.Drawing.Point(94, 93);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(200, 32);
+            this.tbName.TabIndex = 0;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(115, 96);
+            this.lbNome.Location = new System.Drawing.Point(21, 96);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(67, 25);
             this.lbNome.TabIndex = 1;
@@ -61,77 +69,139 @@
             // 
             this.lbNascimento.AutoSize = true;
             this.lbNascimento.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNascimento.Location = new System.Drawing.Point(62, 147);
+            this.lbNascimento.Location = new System.Drawing.Point(313, 96);
             this.lbNascimento.Name = "lbNascimento";
-            this.lbNascimento.Size = new System.Drawing.Size(121, 25);
+            this.lbNascimento.Size = new System.Drawing.Size(48, 25);
             this.lbNascimento.TabIndex = 3;
-            this.lbNascimento.Text = "Nascimento: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(174, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 54);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNascimento.Location = new System.Drawing.Point(186, 145);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(200, 32);
-            this.dtpNascimento.TabIndex = 5;
+            this.lbNascimento.Text = "CPF:";
             // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(164, 248);
+            this.btnSalvar.Location = new System.Drawing.Point(552, 421);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(78, 47);
+            this.btnSalvar.Size = new System.Drawing.Size(78, 41);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // cbCertificacoes
-            // 
-            this.cbCertificacoes.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCertificacoes.FormattingEnabled = true;
-            this.cbCertificacoes.Location = new System.Drawing.Point(186, 199);
-            this.cbCertificacoes.Name = "cbCertificacoes";
-            this.cbCertificacoes.Size = new System.Drawing.Size(200, 33);
-            this.cbCertificacoes.TabIndex = 7;
-            // 
             // lbGrau
             // 
             this.lbGrau.AutoSize = true;
             this.lbGrau.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGrau.Location = new System.Drawing.Point(15, 200);
+            this.lbGrau.Location = new System.Drawing.Point(21, 147);
             this.lbGrau.Name = "lbGrau";
-            this.lbGrau.Size = new System.Drawing.Size(171, 25);
+            this.lbGrau.Size = new System.Drawing.Size(115, 25);
             this.lbGrau.TabIndex = 8;
-            this.lbGrau.Text = "Grau de Instrução: ";
+            this.lbGrau.Text = "RG ou CTPS:";
+            // 
+            // tbCPF
+            // 
+            this.tbCPF.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCPF.Location = new System.Drawing.Point(367, 93);
+            this.tbCPF.Name = "tbCPF";
+            this.tbCPF.Size = new System.Drawing.Size(195, 32);
+            this.tbCPF.TabIndex = 9;
+            // 
+            // tbRG
+            // 
+            this.tbRG.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRG.Location = new System.Drawing.Point(142, 144);
+            this.tbRG.Name = "tbRG";
+            this.tbRG.Size = new System.Drawing.Size(200, 32);
+            this.tbRG.TabIndex = 10;
+            // 
+            // lvCertificatesAdded
+            // 
+            this.lvCertificatesAdded.Location = new System.Drawing.Point(26, 250);
+            this.lvCertificatesAdded.Name = "lvCertificatesAdded";
+            this.lvCertificatesAdded.Size = new System.Drawing.Size(604, 161);
+            this.lvCertificatesAdded.TabIndex = 11;
+            this.lvCertificatesAdded.UseCompatibleStateImageBehavior = false;
+            // 
+            // cbCertificates
+            // 
+            this.cbCertificates.Font = new System.Drawing.Font("Segoe UI", 13.875F);
+            this.cbCertificates.FormattingEnabled = true;
+            this.cbCertificates.Location = new System.Drawing.Point(257, 201);
+            this.cbCertificates.Name = "cbCertificates";
+            this.cbCertificates.Size = new System.Drawing.Size(131, 33);
+            this.cbCertificates.TabIndex = 13;
+            // 
+            // lbSeg
+            // 
+            this.lbSeg.AutoSize = true;
+            this.lbSeg.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSeg.Location = new System.Drawing.Point(21, 205);
+            this.lbSeg.Name = "lbSeg";
+            this.lbSeg.Size = new System.Drawing.Size(236, 25);
+            this.lbSeg.TabIndex = 14;
+            this.lbSeg.Text = "Certificados de Segurança:";
+            // 
+            // pbAdd
+            // 
+            this.pbAdd.BackgroundImage = global::CadastroPessoal.Properties.Resources.add_icon;
+            this.pbAdd.Location = new System.Drawing.Point(600, 202);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(30, 30);
+            this.pbAdd.TabIndex = 15;
+            this.pbAdd.TabStop = false;
+            // 
+            // pbSair
+            // 
+            this.pbSair.BackgroundImage = global::CadastroPessoal.Properties.Resources.close_icon;
+            this.pbSair.Location = new System.Drawing.Point(5, 5);
+            this.pbSair.Name = "pbSair";
+            this.pbSair.Size = new System.Drawing.Size(20, 20);
+            this.pbSair.TabIndex = 12;
+            this.pbSair.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(302, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 54);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dtExpirationDate
+            // 
+            this.dtExpirationDate.Font = new System.Drawing.Font("Segoe UI", 13.875F);
+            this.dtExpirationDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtExpirationDate.Location = new System.Drawing.Point(395, 201);
+            this.dtExpirationDate.Name = "dtExpirationDate";
+            this.dtExpirationDate.Size = new System.Drawing.Size(200, 32);
+            this.dtExpirationDate.TabIndex = 16;
             // 
             // TelaCadastroPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 309);
+            this.ClientSize = new System.Drawing.Size(668, 474);
+            this.Controls.Add(this.dtExpirationDate);
+            this.Controls.Add(this.pbAdd);
+            this.Controls.Add(this.lbSeg);
+            this.Controls.Add(this.cbCertificates);
+            this.Controls.Add(this.pbSair);
+            this.Controls.Add(this.lvCertificatesAdded);
+            this.Controls.Add(this.tbRG);
+            this.Controls.Add(this.tbCPF);
             this.Controls.Add(this.lbGrau);
-            this.Controls.Add(this.cbCertificacoes);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbNascimento);
             this.Controls.Add(this.lbNome);
-            this.Controls.Add(this.tbNome);
+            this.Controls.Add(this.tbName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaCadastroPessoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroPessoa";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.TelaCadastroPessoa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,13 +210,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbNome;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbNascimento;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox cbCertificacoes;
         private System.Windows.Forms.Label lbGrau;
+        private System.Windows.Forms.TextBox tbCPF;
+        private System.Windows.Forms.TextBox tbRG;
+        private System.Windows.Forms.ListView lvCertificatesAdded;
+        private System.Windows.Forms.PictureBox pbSair;
+        private System.Windows.Forms.ComboBox cbCertificates;
+        private System.Windows.Forms.Label lbSeg;
+        private System.Windows.Forms.PictureBox pbAdd;
+        private System.Windows.Forms.DateTimePicker dtExpirationDate;
     }
 }

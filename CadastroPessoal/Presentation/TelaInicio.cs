@@ -26,11 +26,13 @@ namespace CadastroPessoal
             {
                 tabs.Add(tabPage);
             }
+            menuNavBar.BackColor = DesignTemplate.primaryColor;
+            pnTitleBar.BackColor = DesignTemplate.primaryColor;
         }
 
         private void TelaInicio_Load(object sender, EventArgs e)
         {
-            menuStrip1.Renderer = new MyRenderer();
+            menuNavBar.Renderer = new MyRenderer();
             cadastroToolStripMenuItem.BackColor = DesignTemplate.primaryColor;
             cadastroToolStripMenuItem.MouseEnter += DesignTemplate.onToolStripMouseEnter;
             cadastroToolStripMenuItem.MouseLeave += DesignTemplate.onToolStripMouseLeave;
@@ -179,7 +181,7 @@ namespace CadastroPessoal
 
         private void TelaInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TelaAtiva.formAnterior.Show();
+            Utils.ActiveForm.lastForm.Show();
         }
 
         private void pbSair_Click(object sender, EventArgs e)

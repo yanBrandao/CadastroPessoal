@@ -22,34 +22,34 @@ namespace CadastroPessoal
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO `PESSOA`(`PES_NOME`,`PES_DATA_CADASTRO`,`PES_NASCIMENTO`, `PES_CERT_COD`) " +
-                "VALUES(\"" + tbNome.Text + "\", \"" + DateTime.Now.ToString() + "\", \"" + dtpNascimento.Text + "\", " +
-                "(SELECT CERT_ID FROM CERTIFICACOES WHERE CERT_NOME =\"" + cbCertificacoes.SelectedItem + "\"));";
-            try
-            {
-                PessoaDTO.cadastrarPessoa(tbNome.Text, DateTime.Parse(dtpNascimento.Text), cbCertificacoes.SelectedItem.ToString());
-                if (DialogResult.OK == MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information))
-                {
-                    Close();
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //string sql = "INSERT INTO `PESSOA`(`PES_NOME`,`PES_DATA_CADASTRO`,`PES_NASCIMENTO`, `PES_CERT_COD`) " +
+            //    "VALUES(\"" + tbName.Text + "\", \"" + DateTime.Now.ToString() + "\", \"" + dtpNascimento.Text + "\", " +
+            //    ");";
+            //try
+            //{
+            //    PersonDTO.registerPerson(tbName.Text, dtpNascimento.Text, cbCertificacoes.SelectedItem.ToString());
+            //    if (DialogResult.OK == MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information))
+            //    {
+            //        Close();
+            //    }
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void TelaCadastroPessoa_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT CERT_NOME FROM CERTIFICACOES";
+            string sql = "SELECT CET_DESCRIPTION FROM ROS_CERTIFICATE_TYPE";
             try
             {
                 using (Database db = new Database())
                 {
-                    SQLiteDataReader reader = db.executarReader(sql);
+                    SQLiteDataReader reader = db.executeReader(sql);
                     while (reader.Read())
                     {
-                        cbCertificacoes.Items.Add(reader.GetString(0));
+                        cbCertificates.Items.Add(reader.GetString(0));
                     }
                 }
             }

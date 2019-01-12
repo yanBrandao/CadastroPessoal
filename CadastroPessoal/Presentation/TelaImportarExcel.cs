@@ -56,7 +56,7 @@ namespace CadastroPessoal.Presentation
                     {
                         if (linha.Index == dgImportar.Rows.GetLastRow(DataGridViewElementStates.None))
                             break;
-                        PessoaDTO.cadastrarPessoa(linha.Cells[0].Value.ToString(), DateTime.Parse(linha.Cells[1].Value.ToString()), linha.Cells[2].Value.ToString());
+                        PersonDTO.registerPerson(linha.Cells[0].Value.ToString(), linha.Cells[1].Value.ToString(), linha.Cells[2].Value.ToString());
                     }
                     Close();
                     MessageBox.Show("Planilha importada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
