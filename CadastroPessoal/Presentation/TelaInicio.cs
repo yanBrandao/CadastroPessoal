@@ -1,4 +1,5 @@
 ﻿using CadastroPessoal.Presentation;
+using CadastroPessoal.Shared;
 using CadastroPessoal.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,17 +16,34 @@ namespace CadastroPessoal
 {
     public partial class TelaInicio : Form
     {
+        List<TabPage> tabs = new List<TabPage>();
         string perfil;
         public TelaInicio(string per)
         {
             InitializeComponent();
             perfil = per;
+            foreach(TabPage tabPage in tbpAbasPrograma.TabPages)
+            {
+                tabs.Add(tabPage);
+            }
         }
 
         private void TelaInicio_Load(object sender, EventArgs e)
         {
             menuStrip1.Renderer = new MyRenderer();
-            if(perfil == "PADRÃO")
+            cadastroToolStripMenuItem.BackColor = DesignTemplate.primaryColor;
+            cadastroToolStripMenuItem.MouseEnter += DesignTemplate.onToolStripMouseEnter;
+            cadastroToolStripMenuItem.MouseLeave += DesignTemplate.onToolStripMouseLeave;
+            empresaToolStripMenuItem.MouseEnter += DesignTemplate.onToolStripMouseEnter;
+            empresaToolStripMenuItem.MouseLeave += DesignTemplate.onToolStripMouseLeave;
+            pessoaToolStripMenuItem.MouseEnter += DesignTemplate.onToolStripMouseEnter;
+            pessoaToolStripMenuItem.MouseLeave += DesignTemplate.onToolStripMouseLeave;
+            grauDeInstruçãoToolStripMenuItem.MouseEnter += DesignTemplate.onToolStripMouseEnter;
+            grauDeInstruçãoToolStripMenuItem.MouseLeave += DesignTemplate.onToolStripMouseLeave;
+            inícioToolStripMenuItem.MouseEnter += DesignTemplate.onToolStripMouseEnter;
+            inícioToolStripMenuItem.MouseLeave += DesignTemplate.onToolStripMouseLeave;
+            pbIcon.Location = new Point(((Screen.PrimaryScreen.Bounds.Width / 2) - (pbIcon.Width / 2)), pbIcon.Location.Y);
+            if (perfil == "PADRÃO")
             {
                 btnAdicionarPessoa.Visible = false;
                 cadastroToolStripMenuItem.Visible = false;
@@ -37,7 +55,7 @@ namespace CadastroPessoal
             protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
             {
                 Rectangle rc = new Rectangle(Point.Empty, e.Item.Size);
-                Color c = e.Item.Selected ? Color.Azure : Color.FromArgb(232, 21, 37);
+                Color c = e.Item.Selected ? Color.Azure : DesignTemplate.primaryColor;
                 using (SolidBrush brush = new SolidBrush(c))
                     e.Graphics.FillRectangle(brush, rc);
             }
@@ -147,7 +165,10 @@ namespace CadastroPessoal
 
         private void pessoaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            tbpAbasPrograma.BringToFront();
             tbpAbasPrograma.Visible = true;
+            tbpAbasPrograma.TabPages.Clear();
+            tbpAbasPrograma.TabPages.Add(tabs[0]);
             CarregaDados();
         }
 
@@ -158,7 +179,31 @@ namespace CadastroPessoal
 
         private void TelaInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TelaAtiva.formAnterior.Show();
+            //TelaAtiva.formAnterior.Show();
+        }
+
+        private void pbSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void inícioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            
+            tbpAbasPrograma.Visible = false;
+        }
+
+        private void pbEdit_Click(object sender, EventArgs e)
+        {
+            tbpAbasPrograma.BringToFront();
+            tbpAbasPrograma.Visible = true;
+            tbpAbasPrograma.TabPages.Clear();
+            tbpAbasPrograma.TabPages.Add(tabs[1]);
+        }
+
+        private void lbEncontrarPessoas_Click(object sender, EventArgs e)
+        {
+            pbEdit_Click(sender, e);
         }
     }
 }

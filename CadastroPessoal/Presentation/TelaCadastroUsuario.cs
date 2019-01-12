@@ -53,6 +53,25 @@ namespace CadastroPessoal.Presentation
                 db.executarComandoSQL(sql);
             }
         }
-        
+
+        private void TelaCadastroUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            TelaAtiva.formAnterior.Show();
+        }
+
+        private void btnSalvar_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalvar.BackColor = Color.Transparent;
+        }
+
+        private void btnSalvar_MouseEnter(object sender, EventArgs e)
+        {
+            btnSalvar.BackColor = Color.Green;
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

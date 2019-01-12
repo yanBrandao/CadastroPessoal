@@ -38,20 +38,18 @@
             // tbNome
             // 
             this.tbNome.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNome.Location = new System.Drawing.Point(439, 281);
-            this.tbNome.Margin = new System.Windows.Forms.Padding(6);
+            this.tbNome.Location = new System.Drawing.Point(220, 146);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(337, 57);
+            this.tbNome.Size = new System.Drawing.Size(170, 32);
             this.tbNome.TabIndex = 0;
             // 
             // lbInstrução
             // 
             this.lbInstrução.AutoSize = true;
             this.lbInstrução.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInstrução.Location = new System.Drawing.Point(77, 284);
-            this.lbInstrução.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbInstrução.Location = new System.Drawing.Point(38, 148);
             this.lbInstrução.Name = "lbInstrução";
-            this.lbInstrução.Size = new System.Drawing.Size(331, 50);
+            this.lbInstrução.Size = new System.Drawing.Size(171, 25);
             this.lbInstrução.TabIndex = 1;
             this.lbInstrução.Text = "Grau de Instrução: ";
             // 
@@ -59,10 +57,9 @@
             // 
             this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(336, 466);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSalvar.Location = new System.Drawing.Point(168, 242);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(156, 90);
+            this.btnSalvar.Size = new System.Drawing.Size(78, 47);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -71,26 +68,25 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(358, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Location = new System.Drawing.Point(179, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 63);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // TelaCadastroInstrução
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 571);
+            this.ClientSize = new System.Drawing.Size(428, 297);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbInstrução);
             this.Controls.Add(this.tbNome);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TelaCadastroInstrução";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroInstrução";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

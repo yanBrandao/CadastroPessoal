@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using CadastroPessoal.Utils;
 using CadastroPessoal.Presentation;
 using System.Data.SQLite;
+using CadastroPessoal.Shared;
 
 namespace CadastroPessoal
 {
@@ -20,6 +21,8 @@ namespace CadastroPessoal
         public TelaLogin()
         {
             InitializeComponent();
+            btnEntrar.MouseEnter += DesignTemplate.onButtonSaveMouseEnter;
+            btnEntrar.MouseLeave += DesignTemplate.onButtonMouseLeave;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -83,5 +86,7 @@ namespace CadastroPessoal
             TelaAtiva.formAnterior = this;
             new TelaCadastroUsuario().Show();
         }
+
+        
     }
 }

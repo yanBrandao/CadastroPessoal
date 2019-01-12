@@ -42,20 +42,18 @@
             // tbNome
             // 
             this.tbNome.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNome.Location = new System.Drawing.Point(373, 182);
-            this.tbNome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbNome.Location = new System.Drawing.Point(186, 95);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(396, 57);
+            this.tbNome.Size = new System.Drawing.Size(200, 32);
             this.tbNome.TabIndex = 0;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(230, 185);
-            this.lbNome.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbNome.Location = new System.Drawing.Point(115, 96);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(131, 50);
+            this.lbNome.Size = new System.Drawing.Size(67, 25);
             this.lbNome.TabIndex = 1;
             this.lbNome.Text = "Nome:";
             // 
@@ -63,39 +61,35 @@
             // 
             this.lbNascimento.AutoSize = true;
             this.lbNascimento.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNascimento.Location = new System.Drawing.Point(125, 283);
-            this.lbNascimento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbNascimento.Location = new System.Drawing.Point(62, 147);
             this.lbNascimento.Name = "lbNascimento";
-            this.lbNascimento.Size = new System.Drawing.Size(236, 50);
+            this.lbNascimento.Size = new System.Drawing.Size(121, 25);
             this.lbNascimento.TabIndex = 3;
             this.lbNascimento.Text = "Nascimento: ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(174, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(59, 54);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // dtpNascimento
             // 
             this.dtpNascimento.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNascimento.Location = new System.Drawing.Point(373, 278);
-            this.dtpNascimento.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtpNascimento.Location = new System.Drawing.Point(186, 145);
             this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(396, 57);
+            this.dtpNascimento.Size = new System.Drawing.Size(200, 32);
             this.dtpNascimento.TabIndex = 5;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(329, 477);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(164, 248);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(156, 90);
+            this.btnSalvar.Size = new System.Drawing.Size(78, 47);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -105,28 +99,26 @@
             // 
             this.cbCertificacoes.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCertificacoes.FormattingEnabled = true;
-            this.cbCertificacoes.Location = new System.Drawing.Point(373, 382);
-            this.cbCertificacoes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbCertificacoes.Location = new System.Drawing.Point(186, 199);
             this.cbCertificacoes.Name = "cbCertificacoes";
-            this.cbCertificacoes.Size = new System.Drawing.Size(396, 58);
+            this.cbCertificacoes.Size = new System.Drawing.Size(200, 33);
             this.cbCertificacoes.TabIndex = 7;
             // 
             // lbGrau
             // 
             this.lbGrau.AutoSize = true;
             this.lbGrau.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGrau.Location = new System.Drawing.Point(30, 385);
-            this.lbGrau.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbGrau.Location = new System.Drawing.Point(15, 200);
             this.lbGrau.Name = "lbGrau";
-            this.lbGrau.Size = new System.Drawing.Size(331, 50);
+            this.lbGrau.Size = new System.Drawing.Size(171, 25);
             this.lbGrau.TabIndex = 8;
             this.lbGrau.Text = "Grau de Instrução: ";
             // 
             // TelaCadastroPessoa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 594);
+            this.ClientSize = new System.Drawing.Size(404, 309);
             this.Controls.Add(this.lbGrau);
             this.Controls.Add(this.cbCertificacoes);
             this.Controls.Add(this.btnSalvar);
@@ -135,10 +127,10 @@
             this.Controls.Add(this.lbNascimento);
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.tbNome);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "TelaCadastroPessoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroPessoa";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.TelaCadastroPessoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
