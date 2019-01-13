@@ -58,5 +58,16 @@ namespace CadastroPessoal
                 MessageBox.Show("Erro :" + ex.Message);
             }
         }
+
+        private void pbSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pbAdd_Click(object sender, EventArgs e)
+        {
+            lvCertificatesAdded.Items.Add(cbCertificates.Text + ", " + dtExpirationDate.Text);
+            cbCertificates.Text = "";
+        }
     }
 }
