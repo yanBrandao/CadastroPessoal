@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +60,10 @@
             this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbEdit = new System.Windows.Forms.PictureBox();
             this.lbEncontrarPessoas = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pbEdit = new System.Windows.Forms.PictureBox();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbIcon = new System.Windows.Forms.PictureBox();
             this.pbSair = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -80,8 +81,9 @@
             this.cmsMenuCelula.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).BeginInit();
             this.SuspendLayout();
@@ -128,6 +130,7 @@
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
             this.empresaToolStripMenuItem.Size = new System.Drawing.Size(234, 30);
             this.empresaToolStripMenuItem.Text = "Empresa";
+            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // pessoaToolStripMenuItem
             // 
@@ -194,23 +197,23 @@
             // 
             this.gridPessoas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPessoas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPessoas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPessoas.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPessoas.Location = new System.Drawing.Point(0, 0);
             this.gridPessoas.Name = "gridPessoas";
@@ -402,18 +405,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 268);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // pbEdit
-            // 
-            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
-            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEdit.Location = new System.Drawing.Point(76, 10);
-            this.pbEdit.Name = "pbEdit";
-            this.pbEdit.Size = new System.Drawing.Size(100, 100);
-            this.pbEdit.TabIndex = 0;
-            this.pbEdit.TabStop = false;
-            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
-            // 
             // lbEncontrarPessoas
             // 
             this.lbEncontrarPessoas.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -430,6 +421,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panel7.Controls.Add(this.pbMinimize);
             this.panel7.Controls.Add(this.pbIcon);
             this.panel7.Controls.Add(this.pbSair);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -437,6 +429,28 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(506, 80);
             this.panel7.TabIndex = 3;
+            // 
+            // pbEdit
+            // 
+            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
+            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEdit.Location = new System.Drawing.Point(76, 10);
+            this.pbEdit.Name = "pbEdit";
+            this.pbEdit.Size = new System.Drawing.Size(100, 100);
+            this.pbEdit.TabIndex = 0;
+            this.pbEdit.TabStop = false;
+            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
+            // 
+            // pbMinimize
+            // 
+            this.pbMinimize.BackgroundImage = global::CadastroPessoal.Properties.Resources.minimize_icon;
+            this.pbMinimize.Location = new System.Drawing.Point(29, 3);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(20, 20);
+            this.pbMinimize.TabIndex = 3;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
             // 
             // pbIcon
             // 
@@ -493,8 +507,9 @@
             this.panel6.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).EndInit();
             this.ResumeLayout(false);
@@ -537,6 +552,7 @@
         private System.Windows.Forms.Label lbBusca;
         private System.Windows.Forms.Label lbEmpresa;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pbMinimize;
     }
 }
 
