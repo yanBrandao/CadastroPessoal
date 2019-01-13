@@ -207,5 +207,15 @@ namespace CadastroPessoal
         {
             pbEdit_Click(sender, e);
         }
+
+        private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RegisterCompanyForm().Show();
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

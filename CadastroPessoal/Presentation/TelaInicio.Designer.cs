@@ -128,6 +128,7 @@
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
             this.empresaToolStripMenuItem.Size = new System.Drawing.Size(234, 30);
             this.empresaToolStripMenuItem.Text = "Empresa";
+            this.empresaToolStripMenuItem.Click += new System.EventHandler(this.empresaToolStripMenuItem_Click);
             // 
             // pessoaToolStripMenuItem
             // 
@@ -438,6 +439,18 @@
             this.pbEdit.TabStop = false;
             this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
             // 
+            // pbEdit
+            // 
+            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
+            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEdit.Location = new System.Drawing.Point(76, 10);
+            this.pbEdit.Name = "pbEdit";
+            this.pbEdit.Size = new System.Drawing.Size(100, 100);
+            this.pbEdit.TabIndex = 0;
+            this.pbEdit.TabStop = false;
+            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
+            // 
             // pbIcon
             // 
             this.pbIcon.BackgroundImage = global::CadastroPessoal.Properties.Resources.app_icon1;
@@ -537,6 +550,7 @@
         private System.Windows.Forms.Label lbBusca;
         private System.Windows.Forms.Label lbEmpresa;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pbMinimize;
     }
 }
 
