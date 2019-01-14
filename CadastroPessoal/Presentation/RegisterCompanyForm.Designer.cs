@@ -30,10 +30,10 @@
         {
             this.pbCompanyIcon = new System.Windows.Forms.PictureBox();
             this.pnBackground = new System.Windows.Forms.Panel();
-            this.pbClose = new System.Windows.Forms.PictureBox();
-            this.lbNome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbNome = new System.Windows.Forms.Label();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCompanyIcon)).BeginInit();
             this.pnBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -62,15 +62,21 @@
             this.pnBackground.Size = new System.Drawing.Size(600, 346);
             this.pnBackground.TabIndex = 1;
             // 
-            // pbClose
+            // btnSave
             // 
-            this.pbClose.BackgroundImage = global::CadastroPessoal.Properties.Resources.close_icon;
-            this.pbClose.Location = new System.Drawing.Point(10, 10);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(20, 20);
-            this.pbClose.TabIndex = 1;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            this.btnSave.Location = new System.Drawing.Point(474, 261);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(87, 40);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(276, 182);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(285, 32);
+            this.textBox1.TabIndex = 3;
             // 
             // lbNome
             // 
@@ -81,21 +87,15 @@
             this.lbNome.TabIndex = 2;
             this.lbNome.Text = "Nome da Companhia:";
             // 
-            // textBox1
+            // pbClose
             // 
-            this.textBox1.Location = new System.Drawing.Point(276, 182);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 32);
-            this.textBox1.TabIndex = 3;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(474, 261);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(87, 40);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.pbClose.BackgroundImage = global::CadastroPessoal.Properties.Resources.close_icon;
+            this.pbClose.Location = new System.Drawing.Point(10, 10);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(20, 20);
+            this.pbClose.TabIndex = 1;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // RegisterCompanyForm
             // 

@@ -295,3 +295,4 @@ D:\Developer\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.csproj.Co
 D:\Developer\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.exe
 D:\Developer\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.pdb
 D:\Developer\CadastroPessoal\CadastroPessoal\bin\Debug\ROS_DB.db
+D:\Developer\CadastroPessoal\CadastroPessoal\obj\Debug\CadastroPessoal.Presentation.RegisterCompanyForm.resources

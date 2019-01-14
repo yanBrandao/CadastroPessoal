@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroPessoal.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,9 @@ namespace CadastroPessoal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaLogin());
+            //Application.Run(new TelaLogin());
             //Application.Run(new TelaInicio(""));
+            Application.Run(new TelaImportarExcel()); 
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using OfficeExcel = Microsoft.Office.Interop.Excel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,8 @@ namespace CadastroPessoal.Presentation
 {
     public partial class TelaImportarExcel : Form
     {
+        private long lastCompanyId;
+        private long lastPersonId;
         public TelaImportarExcel()
         {
             InitializeComponent();
@@ -23,21 +26,56 @@ namespace CadastroPessoal.Presentation
         {
             try
             {
-                String name = "Pessoas";
+                
+
+
+                String name = "base_dados2";
                 OpenFileDialog ofd = new OpenFileDialog();
                 if (DialogResult.OK == ofd.ShowDialog())
                 {
-                    String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
-                                    ofd.FileName +
-                                    ";Extended Properties=Excel 12.0;";
-
-                    OleDbConnection con = new OleDbConnection(constr);
-                    OleDbCommand oconn = new OleDbCommand("SELECT * FROM [" + name + "$]", con);
-                    con.Open();
-
-                    OleDbDataAdapter sda = new OleDbDataAdapter(oconn);
+                    OfficeExcel.Application app = new OfficeExcel.Application();
+                    OfficeExcel.Workbook book = app.Workbooks.Open( ofd.FileName);                    
                     DataTable data = new DataTable();
-                    sda.Fill(data);
+                    int index = 0;
+                    object rowIndex = 2;
+                    DataRow row;
+                    data.Columns.Add("EMPRESA");
+                    data.Columns.Add("NOME");
+                    data.Columns.Add("RG / CTPS");
+                    data.Columns.Add("Integração");
+                    data.Columns.Add("Data do ASO");
+                    data.Columns.Add("ASO NR-10");
+                    data.Columns.Add("ASO NR-33");
+                    data.Columns.Add("ASO NR-35");
+                    data.Columns.Add("NR10");
+                    data.Columns.Add("SEP");
+                    data.Columns.Add("NR35");
+                    data.Columns.Add("NR18 ANDAIMES");
+                    data.Columns.Add("NR18 GENIE");
+                    data.Columns.Add("CAMINHÃO MUNCK");
+                    data.Columns.Add("NR 11 - EMPILHADEIRA");
+                    data.Columns.Add("NR 11 - TALHA");
+                    data.Columns.Add("SOLDA");
+                    data.Columns.Add("NR-12");
+                    data.Columns.Add("NR 20");
+                    data.Columns.Add("NR 33");
+                    foreach (OfficeExcel.Worksheet sheet in book.Sheets)
+                    {
+                        if(sheet.Name == name)
+                        {
+                            while (((OfficeExcel.Range)sheet.Cells[rowIndex, 1]).Value2 != null)
+                            {
+                                rowIndex = 2 + index;
+                                row = data.NewRow();
+                                for (int i = 0; i < 20; i++)
+                                {
+                                    row[i] = Convert.ToString((sheet.Cells[rowIndex, i + 1]).Value2);
+                                }
+                                index++;
+                                data.Rows.Add(row);
+                            }
+                        }
+                    }
                     dgImportar.DataSource = data;
                 }
             } catch (Exception ex)
@@ -56,7 +94,12 @@ namespace CadastroPessoal.Presentation
                     {
                         if (linha.Index == dgImportar.Rows.GetLastRow(DataGridViewElementStates.None))
                             break;
-                        PersonDTO.registerPerson(linha.Cells[0].Value.ToString(), linha.Cells[1].Value.ToString(), linha.Cells[2].Value.ToString());
+                        if(CompanyDTO.findCompany(linha.Cells[0].Value.ToString()) == -1)
+                        {
+                             lastCompanyId = CompanyDTO.registerCompany(linha.Cells[0].Value.ToString());
+                        }
+                        lastPersonId = PersonDTO.registerPerson(linha.Cells[1].Value.ToString(), String.Empty, linha.Cells[2].Value.ToString());
+                        SupplierDTO.registerSupplier(lastPersonId, lastCompanyId);
                     }
                     Close();
                     MessageBox.Show("Planilha importada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);

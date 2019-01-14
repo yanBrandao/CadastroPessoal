@@ -70,16 +70,17 @@ namespace CadastroPessoal
 
         private void CarregaDados()
         {
+            Database db = new Database();
             DataTable dt = new DataTable();
             SQLiteConnection conn = null;
-            string sql = "SELECT PES_NOME AS NOME, PES_NASCIMENTO AS DATA_NASCIMENTO, CERT.CERT_NOME AS GRAU_INSTRUÇÃO " +
-                "FROM PESSOA PES" +
-                " JOIN CERTIFICACOES CERT ON PES.PES_CERT_COD = CERT.CERT_ID";
-            string strConn = @"Data Source=pessoal_db.db";
+            string sql = "SELECT COM_NAME EMPRESA, PER_NAME NOME " +
+                         "FROM ROS_SUPPLIER " +
+                         "JOIN ROS_COMPANY ON ROS_SUPPLIER.SUP_COM_ID = ROS_COMPANY.COM_ID " +
+                         "JOIN ROS_PERSON ON ROS_SUPPLIER.SUP_PER_ID = ROS_PERSON.PER_ID ";
             try
             {
-                conn = new SQLiteConnection(strConn);
-                SQLiteDataAdapter da = new SQLiteDataAdapter(sql, strConn);
+                conn = new SQLiteConnection(db.strConn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(sql, db.strConn);
                 da.Fill(dt);
                 gridPessoas.DataSource = dt.DefaultView;
                 
@@ -213,7 +214,7 @@ namespace CadastroPessoal
             new RegisterCompanyForm().Show();
         }
 
-        private void pbMinimize_Click(object sender, EventArgs e)
+        private void pbMinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }

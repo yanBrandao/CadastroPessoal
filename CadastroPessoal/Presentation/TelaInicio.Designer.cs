@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuNavBar = new System.Windows.Forms.MenuStrip();
             this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +60,10 @@
             this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pbEdit = new System.Windows.Forms.PictureBox();
             this.lbEncontrarPessoas = new System.Windows.Forms.Label();
             this.pnTitleBar = new System.Windows.Forms.Panel();
-            this.pbEdit = new System.Windows.Forms.PictureBox();
+            this.pbMinimizeButton = new System.Windows.Forms.PictureBox();
             this.pbIcon = new System.Windows.Forms.PictureBox();
             this.pbSair = new System.Windows.Forms.PictureBox();
             this.menuNavBar.SuspendLayout();
@@ -80,8 +81,9 @@
             this.cmsMenuCelula.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
+            this.pnTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).BeginInit();
             this.SuspendLayout();
@@ -195,23 +197,23 @@
             // 
             this.gridPessoas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPessoas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPessoas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPessoas.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPessoas.Location = new System.Drawing.Point(0, 0);
             this.gridPessoas.Name = "gridPessoas";
@@ -403,6 +405,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 238);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // pbEdit
+            // 
+            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
+            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEdit.Location = new System.Drawing.Point(76, 3);
+            this.pbEdit.Name = "pbEdit";
+            this.pbEdit.Size = new System.Drawing.Size(100, 92);
+            this.pbEdit.TabIndex = 0;
+            this.pbEdit.TabStop = false;
+            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
+            // 
             // lbEncontrarPessoas
             // 
             this.lbEncontrarPessoas.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -419,6 +433,7 @@
             // pnTitleBar
             // 
             this.pnTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.pnTitleBar.Controls.Add(this.pbMinimizeButton);
             this.pnTitleBar.Controls.Add(this.pbIcon);
             this.pnTitleBar.Controls.Add(this.pbSair);
             this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -427,29 +442,15 @@
             this.pnTitleBar.Size = new System.Drawing.Size(506, 110);
             this.pnTitleBar.TabIndex = 3;
             // 
-            // pbEdit
+            // pbMinimizeButton
             // 
-            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
-            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEdit.Location = new System.Drawing.Point(76, 3);
-            this.pbEdit.Name = "pbEdit";
-            this.pbEdit.Size = new System.Drawing.Size(100, 92);
-            this.pbEdit.TabIndex = 0;
-            this.pbEdit.TabStop = false;
-            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
-            // 
-            // pbEdit
-            // 
-            this.pbEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbEdit.BackgroundImage = global::CadastroPessoal.Properties.Resources.srch_icon;
-            this.pbEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEdit.Location = new System.Drawing.Point(76, 10);
-            this.pbEdit.Name = "pbEdit";
-            this.pbEdit.Size = new System.Drawing.Size(100, 100);
-            this.pbEdit.TabIndex = 0;
-            this.pbEdit.TabStop = false;
-            this.pbEdit.Click += new System.EventHandler(this.pbEdit_Click);
+            this.pbMinimizeButton.BackgroundImage = global::CadastroPessoal.Properties.Resources.minimize_icon;
+            this.pbMinimizeButton.Location = new System.Drawing.Point(29, 3);
+            this.pbMinimizeButton.Name = "pbMinimizeButton";
+            this.pbMinimizeButton.Size = new System.Drawing.Size(20, 20);
+            this.pbMinimizeButton.TabIndex = 2;
+            this.pbMinimizeButton.TabStop = false;
+            this.pbMinimizeButton.Click += new System.EventHandler(this.pbMinimizeButton_Click);
             // 
             // pbIcon
             // 
@@ -506,8 +507,9 @@
             this.panel6.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.pnTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
+            this.pnTitleBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSair)).EndInit();
             this.ResumeLayout(false);
@@ -551,6 +553,7 @@
         private System.Windows.Forms.Label lbEmpresa;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.PictureBox pbMinimizeButton;
     }
 }
 

@@ -11,7 +11,7 @@ namespace CadastroPessoal.Utils
     public class Database : IDisposable
     {
         SQLiteConnection conn = null;
-        string strConn = @"Data Source=ROS_DB.db";
+        public string strConn = @"Data Source=ROS_DB.db";
 
         public void Dispose()
         {
@@ -40,6 +40,32 @@ namespace CadastroPessoal.Utils
                     conn.Close();
                 }
             }
+        }
+
+        public long executeSelectScalarSQL(string sql)
+        {
+            long scalar = -1;
+            string strConn = @"Data Source=ROS_DB.db";
+            try
+            {
+                conn = new SQLiteConnection(strConn);
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand(sql, conn);
+                scalar = (long)command.ExecuteScalar();
+
+            }
+            catch (Exception)
+            {
+                scalar = -1;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return scalar;
         }
 
         public long executeScalarSQL(string sql)
