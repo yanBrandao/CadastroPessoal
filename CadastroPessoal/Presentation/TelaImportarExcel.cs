@@ -29,7 +29,7 @@ namespace CadastroPessoal.Presentation
                 
 
 
-                String name = "base_dados2";
+                String name = "base_dados4";
                 OpenFileDialog ofd = new OpenFileDialog();
                 if (DialogResult.OK == ofd.ShowDialog())
                 {
