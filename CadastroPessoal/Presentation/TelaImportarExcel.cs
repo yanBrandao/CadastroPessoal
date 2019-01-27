@@ -29,7 +29,7 @@ namespace CadastroPessoal.Presentation
                 
 
 
-                String name = "base_dados4";
+                String name = "teste";
                 OpenFileDialog ofd = new OpenFileDialog();
                 if (DialogResult.OK == ofd.ShowDialog())
                 {
@@ -66,10 +66,19 @@ namespace CadastroPessoal.Presentation
                             while (((OfficeExcel.Range)sheet.Cells[rowIndex, 1]).Value2 != null)
                             {
                                 rowIndex = 2 + index;
+
                                 row = data.NewRow();
                                 for (int i = 0; i < 20; i++)
                                 {
-                                    row[i] = Convert.ToString((sheet.Cells[rowIndex, i + 1]).Value2);
+                                    DateTime date = new DateTime(1899, 12, 31);
+                                    string cellValue = sheet.Cells[rowIndex, i + 1].Value2;
+
+                                    row[i] = cellValue;
+                                    if (IsDigit(cellValue))
+                                    {
+                                        date.AddDays(Convert.ToInt32(cellValue));
+                                        row[i] = date.ToShortDateString();
+                                    }
                                 }
                                 index++;
                                 data.Rows.Add(row);
@@ -117,6 +126,17 @@ namespace CadastroPessoal.Presentation
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        bool IsDigit(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
         }
     }
 }
