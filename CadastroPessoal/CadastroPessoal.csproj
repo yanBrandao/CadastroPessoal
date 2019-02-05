@@ -74,8 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\CertificateTypeDTO.cs" />
     <Compile Include="DTO\CompanyDTO.cs" />
     <Compile Include="DTO\PersonDTO.cs" />
+    <Compile Include="DTO\SecurityCertificateDTO.cs" />
     <Compile Include="DTO\SupplierDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="Model\Person.cs" />
@@ -125,8 +127,9 @@
     </Compile>
     <Compile Include="Shared\DesignTemplate.cs" />
     <Compile Include="Utils\CustomMD5.cs" />
-    <Compile Include="Utils\Database.cs" />
+    <Compile Include="Utils\DatabaseROS.cs" />
     <Compile Include="Utils\ActiveForm.cs" />
+    <Compile Include="Utils\Month.cs" />
     <EmbeddedResource Include="Presentation\RegisterCompanyForm.resx">
       <DependentUpon>RegisterCompanyForm.cs</DependentUpon>
     </EmbeddedResource>

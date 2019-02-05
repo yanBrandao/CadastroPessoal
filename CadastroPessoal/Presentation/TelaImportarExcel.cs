@@ -10,6 +10,7 @@ using System.Text;
 using OfficeExcel = Microsoft.Office.Interop.Excel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CadastroPessoal.Utils;
 
 namespace CadastroPessoal.Presentation
 {
@@ -17,6 +18,7 @@ namespace CadastroPessoal.Presentation
     {
         private long lastCompanyId;
         private long lastPersonId;
+        private long lastSupplierId;
         public TelaImportarExcel()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace CadastroPessoal.Presentation
                 
 
 
-                String name = "teste";
+                String name = "teste2";
                 OpenFileDialog ofd = new OpenFileDialog();
                 if (DialogResult.OK == ofd.ShowDialog())
                 {
@@ -43,10 +45,10 @@ namespace CadastroPessoal.Presentation
                     data.Columns.Add("NOME");
                     data.Columns.Add("RG / CTPS");
                     data.Columns.Add("Integração");
-                    data.Columns.Add("Data do ASO");
                     data.Columns.Add("ASO NR-10");
-                    data.Columns.Add("ASO NR-33");
-                    data.Columns.Add("ASO NR-35");
+                    data.Columns.Add("ASO NR-10 STATUS");
+                    data.Columns.Add("ASO NR-33 STATUS");
+                    data.Columns.Add("ASO NR-35 STATUS");
                     data.Columns.Add("NR10");
                     data.Columns.Add("SEP");
                     data.Columns.Add("NR35");
@@ -71,14 +73,30 @@ namespace CadastroPessoal.Presentation
                                 for (int i = 0; i < 20; i++)
                                 {
                                     DateTime date = new DateTime(1899, 12, 31);
-                                    string cellValue = sheet.Cells[rowIndex, i + 1].Value2;
-
-                                    row[i] = cellValue;
-                                    if (IsDigit(cellValue))
+                                    string cellValue = Convert.ToString(sheet.Cells[rowIndex, i + 1].Value2);
+                                    if (!String.IsNullOrEmpty(cellValue))
                                     {
-                                        date.AddDays(Convert.ToInt32(cellValue));
-                                        row[i] = date.ToShortDateString();
+                                        row[i] = cellValue;
+                                        if (IsDigit(cellValue) && i != 2)
+                                        {
+                                            int teste = Convert.ToInt32(cellValue);
+                                            date = date.AddDays(teste - 1);
+                                            row[i] = date.ToShortDateString();
+                                        }
+                                        else if (cellValue.Contains('/'))
+                                        {
+                                            string[] dateSplitted = cellValue.Split('/');
+                                            if (dateSplitted.Length == 3)
+                                            {
+                                                if (MonthClass.GetAllMonth().Contains(dateSplitted[1].ToLower()))
+                                                {
+                                                    int monthNumber = MonthClass.GetAllMonth().IndexOf(dateSplitted[1].ToLower());
+                                                    row[i] = (monthNumber + 1) + "/" + dateSplitted[0] + "/20" + dateSplitted[2];
+                                                }
+                                            }
+                                        }
                                     }
+                                    
                                 }
                                 index++;
                                 data.Rows.Add(row);
@@ -95,22 +113,37 @@ namespace CadastroPessoal.Presentation
 
         private void Salvar_Click(object sender, EventArgs e)
         {
+            int count = 0;
             try
             {
                 if (dgImportar.Rows.Count > 0)
                 {
-                    foreach(DataGridViewRow linha in dgImportar.Rows)
+                    pbImport.Maximum = dgImportar.Rows.Count - 1;
+                    pbImport.Minimum = 0;
+                    foreach (DataGridViewRow linha in dgImportar.Rows)
                     {
+                        lbContador.Text = "Importando pessoas: " + count + "/" + (dgImportar.Rows.Count-1);
+                        pbImport.Value = count;
                         if (linha.Index == dgImportar.Rows.GetLastRow(DataGridViewElementStates.None))
                             break;
-                        if(CompanyDTO.findCompany(linha.Cells[0].Value.ToString()) == -1)
+                        lastCompanyId = CompanyDTO.findCompany(linha.Cells[0].Value.ToString());
+                        if (lastCompanyId == -1)
                         {
                              lastCompanyId = CompanyDTO.registerCompany(linha.Cells[0].Value.ToString());
                         }
                         lastPersonId = PersonDTO.registerPerson(linha.Cells[1].Value.ToString(), String.Empty, linha.Cells[2].Value.ToString());
-                        SupplierDTO.registerSupplier(lastPersonId, lastCompanyId);
+                        lastSupplierId = SupplierDTO.registerSupplier(lastPersonId, lastCompanyId);
+                        foreach(DataGridViewCell cell in linha.Cells)
+                        {
+                            if ("" != cell.Value.ToString() && cell.Value.ToString().Contains('/'))
+                            {
+                                long certTypeId = CertificateTypeDTO.findCertificate(dgImportar.Columns[cell.ColumnIndex].HeaderText);
+                                SecurityCertificateDTO.registerSecurityCertificate(lastSupplierId, certTypeId, cell.Value.ToString());
+                            }
+                        }
+                        count++;
+                        Application.DoEvents();
                     }
-                    Close();
                     MessageBox.Show("Planilha importada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -130,6 +163,7 @@ namespace CadastroPessoal.Presentation
 
         bool IsDigit(string str)
         {
+            
             foreach (char c in str)
             {
                 if (c < '0' || c > '9')

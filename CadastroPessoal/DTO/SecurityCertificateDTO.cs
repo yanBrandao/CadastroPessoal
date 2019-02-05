@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace CadastroPessoal.DTO
 {
-    public static class SupplierDTO
+    public static class SecurityCertificateDTO
     {
-        public static long registerSupplier(long personId, long companyId)
+        public static long registerSecurityCertificate(long supplierId, long certId, string date)
         {
-            string sql = "INSERT INTO `ROS_SUPPLIER`(`SUP_PER_ID`, `SUP_COM_ID`) " +
-                "VALUES(" + personId + "," + companyId +");";
+            string sql = "INSERT INTO ROS_SECURITY_CERTIFICATE (SEC_SUP_ID, SEC_CET_ID, SEC_DATE)" +
+                "VALUES(" + supplierId + "," + certId + ",\"" + date + "\");";
             long id;
             try
             {

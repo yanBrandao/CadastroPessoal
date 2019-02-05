@@ -44,7 +44,7 @@ namespace CadastroPessoal
             string sql = "SELECT CET_DESCRIPTION FROM ROS_CERTIFICATE_TYPE";
             try
             {
-                using (Database db = new Database())
+                using (DatabaseROS db = new DatabaseROS())
                 {
                     SQLiteDataReader reader = db.executeReader(sql);
                     while (reader.Read())

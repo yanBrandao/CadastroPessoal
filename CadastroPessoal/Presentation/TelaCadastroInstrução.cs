@@ -25,7 +25,7 @@ namespace CadastroPessoal
                 "VALUES(\"" + tbNome.Text + "\");";
             try
             {
-                using (Database db = new Database())
+                using (DatabaseROS db = new DatabaseROS())
                 {
                     db.executeCommandSQL (sql);
                 }

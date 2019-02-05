@@ -17,7 +17,7 @@ namespace CadastroPessoal.DTO
             long id;
             try
             {
-                using (Database db = new Database())
+                using (DatabaseROS db = new DatabaseROS())
                 {
                     id = db.executeScalarSQL(sql);
                 }

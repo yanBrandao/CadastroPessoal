@@ -17,7 +17,7 @@ namespace CadastroPessoal.DTO
                 "VALUES(\"" + login + "\", \"" + cpf + "\", NULL);";
             try
             {
-                using (Database db = new Database())
+                using (DatabaseROS db = new DatabaseROS())
                 {
                     long personId = db.executeScalarSQL(sql);
                     if (personId == -1)
@@ -48,7 +48,7 @@ namespace CadastroPessoal.DTO
                          "FROM ROS_USER US " +
                          "INNER JOIN ROS_PROFILE PRO ON USR_PRO_ID = PRO_ID " +
                          "WHERE USR_LOGIN =  \"" + login + "\"";
-            using (Database db = new Database())
+            using (DatabaseROS db = new DatabaseROS())
             {
                 SQLiteDataReader reader = db.executeReader(sql);
 

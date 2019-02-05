@@ -70,7 +70,7 @@ namespace CadastroPessoal
 
         private void CarregaDados()
         {
-            Database db = new Database();
+            DatabaseROS db = new DatabaseROS();
             DataTable dt = new DataTable();
             SQLiteConnection conn = null;
             string sql = "SELECT COM_NAME EMPRESA, PER_NAME NOME " +
